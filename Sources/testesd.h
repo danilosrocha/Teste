@@ -9,6 +9,12 @@
 
 using namespace std;
 
+// Classe teste de Unidade Nome
+class TUNome {
+
+};
+
+// Classe teste de Unidade Cidade
 class TUCidade {
     private:
         const string VALOR_VALIDO = "Bangkok";
@@ -26,6 +32,22 @@ class TUCidade {
         int run();                              
 };
 
+// Classe teste de Unidade Codigo
+class TUCodigo {
+
+};
+
+// Classe teste de Unidade Data
+class TUData {
+
+};
+
+// Classe teste de Unidade Descricao
+class TUDescricao {
+
+};
+
+// Classe teste de Unidade Duracao
 class TUDuracao {
     private:
         const static int VALOR_VALIDO = 30;
@@ -43,6 +65,27 @@ class TUDuracao {
         int run();                              
 };
 
+// Classe teste de Unidade Email
+class TUEmail {
+
+};
+
+// Classe teste de Unidade Endereco
+class TUEndereco {
+
+};
+
+// Classe teste de Unidade Horario
+class TUHorario {
+
+};
+
+// Classe teste de Unidade Idioma
+class TUIdioma {
+
+};
+
+// Classe teste de Unidade Nota
 class TUNota {
     private:
         const static int VALOR_VALIDO = 3;
@@ -59,4 +102,16 @@ class TUNota {
         const static int FALHA   = -1;          
         int run();                              
 };
+
+// Classe teste de Unidade Senha
+class TUSenha {
+
+};
+
+// Classe teste de Unidade Titulo
+class TUTitulo {
+
+};
+
+
 #endif
