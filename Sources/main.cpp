@@ -34,6 +34,6 @@ int main()
                                 break;
     }
     cout << "joan" << endl;
-    cout << "danilo";
+    cout << "joan";
     return 0;
 }
