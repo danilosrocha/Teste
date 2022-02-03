@@ -70,6 +70,10 @@ class Titulo {
 
 };
 
+inline string Titulo::getTitulo() const{
+    return titulo;
+}
+
 // Dominio de Instancia Cidade
 class Cidade {
     private:
@@ -106,8 +110,12 @@ class Endereco {
 
     public:
         void setEndereco(string);
-        string getEnderco() const;
+        string getEndereco() const;
 };
+
+inline string Endereco::getEndereco() const{
+    return endereco;
+}
 
 // Classe Sessao -------------------
 
@@ -121,6 +129,10 @@ class Data {
         string getData() const;
 };
 
+inline string Data::getData() const{
+    return data;
+}
+
 // Dominio de Instancia Horario
 class Horario {
     private:
@@ -132,6 +144,11 @@ class Horario {
 
 };
 
+inline string Horario::getHorario() const{
+    return horario;
+}
+
+
 // Dominio de Instancia Idioma
 class Idioma {
     private:
@@ -141,6 +158,10 @@ class Idioma {
         void setIdioma(string);
         string getIdioma()const;
 };
+
+inline string Idioma::getIdioma() const{
+    return idioma;
+}
 
 // Dominios Gerais
 
@@ -153,6 +174,10 @@ class Codigo {
         void setCodigo(string);
         string getCodigo() const;
 };
+
+inline string Codigo::getCodigo() const{
+    return codigo;
+}
 
 // Dominio de Instancia Nota
 class Nota {
@@ -179,5 +204,9 @@ class Descricao {
         string getDescricao() const;
 
 };
+
+inline string Descricao::getDescricao() const{
+    return descricao;
+}
 
 #endif

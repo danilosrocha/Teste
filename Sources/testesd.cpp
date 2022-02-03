@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// Teste de Unidade Nome
+
 // Teste de Unidade Cidade
 void TUCidade::setUp() {
     cidade = new Cidade();
@@ -38,11 +40,16 @@ int TUCidade::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
-    cout << cidade->getCidade() << "\n";
+    //cout << cidade->getCidade() << "\n";
     tearDown();
     return estado;
 }
 
+// Teste de Unidade Codigo
+
+// Teste de Unidade Data
+
+// Teste de Unidade Descricao
 
 // Teste de Unidade Duracao
 void TUDuracao::setUp() {
@@ -81,10 +88,18 @@ int TUDuracao::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
-    cout << duracao->getDuracao() << "\n";
+    //cout << duracao->getDuracao() << "\n";
     tearDown();
     return estado;
 }
+
+// Teste de Unidade Email
+
+// Teste de Unidade Endereco
+
+// Teste de Unidade Horario
+
+// Teste de Unidade Idioma
 
 // Teste de Unidade Nota
 void TUNota::setUp() {
@@ -122,8 +137,11 @@ int TUNota::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
-    cout << nota->getNota() << "\n";
+    //cout << nota->getNota() << "\n";
     tearDown();
     return estado;
 }
 
+// Teste de Unidade Senha
+
+// Teste de Unidade Titulo
