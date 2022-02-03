@@ -34,6 +34,6 @@ int main()
                                 break;
     }
     cout << "joan" << endl;
-    cout << "joan";
+    cout << "askdpoasdk";
     return 0;
 }
