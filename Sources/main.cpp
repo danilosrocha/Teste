@@ -33,6 +33,7 @@ int main()
         case TUNota::FALHA: cout << "FALHA - NOTA" << endl;
                                 break;
     }
+    cout << "joan" << endl;
     cout << "danilo";
     return 0;
 }
