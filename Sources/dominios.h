@@ -4,6 +4,9 @@
 #define QUANT_CIDADES 16
 #define NOTAS_VALIDAS 6
 #define DURACOES_VALIDAS 5
+#define QUANT_MESES 12
+#define QUANT_IDIOMAS 4
+#define QUANT_DIGITO 10
 
 #include <stdexcept>
 
@@ -63,7 +66,7 @@ inline string Senha::getSenha() const{
 class Titulo {
     private:
         string titulo;
-
+        void validarTitulo(string);
     public:
         void setTitulo(string);
         string getTitulo() const;
@@ -107,7 +110,7 @@ inline int Duracao::getDuracao() const{
 class Endereco {
     private:
         string endereco;
-
+        void validarEndereco(string);
     public:
         void setEndereco(string);
         string getEndereco() const;
@@ -123,7 +126,7 @@ inline string Endereco::getEndereco() const{
 class Data {
     private:
         string data;
-
+        void validarData(string);
     public:
         void setData(string);
         string getData() const;
@@ -137,7 +140,7 @@ inline string Data::getData() const{
 class Horario {
     private:
         string horario;
-
+        void validarHorario(string);
     public:
         void setHorario(string);
         string getHorario() const;
@@ -153,7 +156,7 @@ inline string Horario::getHorario() const{
 class Idioma {
     private:
         string idioma;
-
+        void validarIdioma(string);
     public:
         void setIdioma(string);
         string getIdioma()const;
@@ -169,7 +172,7 @@ inline string Idioma::getIdioma() const{
 class Codigo {
     private:
         string codigo;
-
+        void validarCodigo(string);
     public:
         void setCodigo(string);
         string getCodigo() const;
@@ -198,11 +201,10 @@ inline int Nota::getNota() const{
 class Descricao {
     private:
         string descricao;
-
+        void validarDescricao(string);
     public:
         void setDescricao(string);
         string getDescricao() const;
-
 };
 
 inline string Descricao::getDescricao() const{
