@@ -33,18 +33,58 @@ class TUCidade {
 };
 
 // Classe teste de Unidade Codigo
-class TUCodigo {
 
+class TUCodigo {
+    private:
+        const string VALOR_VALIDO = "123456";
+        const string VALOR_INVALIDO = "000000";
+        Codigo *codigo;                         
+        int estado;                             
+        void setUp();                           
+        void tearDown();                        
+        void testarCenarioSucesso();            
+        void testarCenarioFalha();              
+
+    public:
+        const static int SUCESSO =  0;          
+        const static int FALHA   = -1;          
+        int run();
 };
 
 // Classe teste de Unidade Data
 class TUData {
+    private:
+        const string VALOR_VALIDO = "30-Abr-2001";
+        const string VALOR_INVALIDO = "30-Fev-1000";
+        Data *data;                         
+        int estado;                             
+        void setUp();                           
+        void tearDown();                        
+        void testarCenarioSucesso();            
+        void testarCenarioFalha();              
 
+    public:
+        const static int SUCESSO =  0;          
+        const static int FALHA   = -1;          
+        int run();
 };
 
 // Classe teste de Unidade Descricao
 class TUDescricao {
+    private:
+        const string VALOR_VALIDO = "HO HAN!";
+        const string VALOR_INVALIDO = "HO   HAN";
+        Descricao *descricao;                         
+        int estado;                             
+        void setUp();                           
+        void tearDown();                        
+        void testarCenarioSucesso();            
+        void testarCenarioFalha();              
 
+    public:
+        const static int SUCESSO =  0;          
+        const static int FALHA   = -1;          
+        int run();
 };
 
 // Classe teste de Unidade Duracao
@@ -72,17 +112,59 @@ class TUEmail {
 
 // Classe teste de Unidade Endereco
 class TUEndereco {
+    private:
+        const string VALOR_VALIDO = "HO HAN";
+        const string VALOR_INVALIDO = "HO   HAN";
+        Endereco *endereco;                         
+        int estado;                             
+        void setUp();                           
+        void tearDown();                        
+        void testarCenarioSucesso();            
+        void testarCenarioFalha();              
 
+    public:
+        const static int SUCESSO =  0;          
+        const static int FALHA   = -1;          
+        int run();
 };
 
 // Classe teste de Unidade Horario
-class TUHorario {
 
+class TUHorario {
+    private:
+        const string VALOR_VALIDO = "23:30";
+        const string VALOR_INVALIDO = "24:60";
+        Horario *horario;                         
+        int estado;                             
+        void setUp();                           
+        void tearDown();                        
+        void testarCenarioSucesso();            
+        void testarCenarioFalha();              
+
+    public:
+        const static int SUCESSO =  0;          
+        const static int FALHA   = -1;          
+        int run();                            
 };
+
+
 
 // Classe teste de Unidade Idioma
 class TUIdioma {
+    private:
+        const string VALOR_VALIDO = "Português";
+        const string VALOR_INVALIDO = "Italiano";
+        Idioma *idioma;                         
+        int estado;                             
+        void setUp();                           
+        void tearDown();                        
+        void testarCenarioSucesso();            
+        void testarCenarioFalha();              
 
+    public:
+        const static int SUCESSO =  0;          
+        const static int FALHA   = -1;          
+        int run();                              
 };
 
 // Classe teste de Unidade Nota
@@ -109,8 +191,22 @@ class TUSenha {
 };
 
 // Classe teste de Unidade Titulo
-class TUTitulo {
 
+class TUTitulo {
+    private:
+        const string VALOR_VALIDO = "HO HAN";
+        const string VALOR_INVALIDO = "HO   HAN";
+        Titulo *titulo;                         
+        int estado;                             
+        void setUp();                           
+        void tearDown();                        
+        void testarCenarioSucesso();            
+        void testarCenarioFalha();              
+
+    public:
+        const static int SUCESSO =  0;          
+        const static int FALHA   = -1;          
+        int run();
 };
 
 
