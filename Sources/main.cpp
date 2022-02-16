@@ -4,51 +4,56 @@
 #include "dominios.cpp"
 #include "testesd.h"
 #include "testesd.cpp"
+#include "testese.h"
+#include "testese.cpp"
 
 using namespace std; 
 
 int main()
 {
-    TUCidade testeA;
-    TUDuracao testeB;
-    TUNota testeC;
-    TUData testeD;
-    TUDescricao testeE;
-    TUTitulo testeF;
-    TUEndereco testeG;
-    TUIdioma testeH;
-    TUHorario testeI;
-    TUCodigo testeJ;
+    // Instanciar classe de teste de domínio.
+    cout << "Inicio teste de dominios" <<endl;
 
-    switch(testeA.run()){
+    TUCidade testeDA;
+    TUDuracao testeDB;
+    TUNota testeDC;
+    TUData testeDD;
+    TUDescricao testeDE;
+    TUTitulo testeDF;
+    TUEndereco testeDG;
+    TUIdioma testeDH;
+    TUHorario testeDI;
+    TUCodigo testeDJ;
+
+    switch(testeDA.run()){
         case TUCidade::SUCESSO: cout << "SUCESSO - CIDADE" << endl;
                                 break;
         case TUCidade::FALHA: cout << "FALHA - CIDADE" << endl;
                                 break;
     }
 
-    switch(testeB.run()){
+    switch(testeDB.run()){
         case TUDuracao::SUCESSO: cout << "SUCESSO - DURACAO" << endl;
                                 break;
         case TUDuracao::FALHA: cout << "FALHA - DURACAO" << endl;
                                 break;
     }
 
-    switch(testeC.run()){
+    switch(testeDC.run()){
         case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
                                 break;
         case TUNota::FALHA: cout << "FALHA - NOTA" << endl;
                                 break;
     }
 
-    switch(testeD.run()){
+    switch(testeDD.run()){
         case TUData::SUCESSO: cout << "SUCESSO - DATA" << endl;
                                 break;
         case TUData::FALHA: cout << "FALHA - DATA" << endl;
                                 break;
     }
 
-    switch(testeE.run()){
+    switch(testeDE.run()){
         case TUDescricao::SUCESSO: cout << "SUCESSO - DESCRICAO" << endl;
                                 break;
         case TUDescricao::FALHA: cout << "FALHA - DESCRICAO" << endl;
@@ -56,7 +61,7 @@ int main()
     }
 
     
-    switch(testeF.run()){
+    switch(testeDF.run()){
         case TUTitulo::SUCESSO: cout << "SUCESSO - TITULO" << endl;
                                 break;
         case TUTitulo::FALHA: cout << "FALHA - TITULO" << endl;
@@ -64,7 +69,7 @@ int main()
     }
 
     
-    switch(testeG.run()){
+    switch(testeDG.run()){
         case TUEndereco::SUCESSO: cout << "SUCESSO - ENDERECO" << endl;
                                 break;
         case TUEndereco::FALHA: cout << "FALHA - ENDERECO" << endl;
@@ -72,7 +77,7 @@ int main()
     }
 
     
-    switch(testeH.run()){
+    switch(testeDH.run()){
         case TUIdioma::SUCESSO: cout << "SUCESSO - IDIOMA" << endl;
                                 break;
         case TUIdioma::FALHA: cout << "FALHA - IDIOMA" << endl;
@@ -80,7 +85,7 @@ int main()
     }
     
 
-    switch(testeI.run()){
+    switch(testeDI.run()){
         case TUHorario::SUCESSO: cout << "SUCESSO - HORARIO" << endl;
                                 break;
         case TUHorario::FALHA: cout << "FALHA - HORARIO" << endl;
@@ -88,12 +93,25 @@ int main()
     }
 
     
-    switch(testeJ.run()){
+    switch(testeDJ.run()){
         case TUCodigo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
                                 break;
         case TUCodigo::FALHA: cout << "FALHA - CODIGO" << endl;
                                 break;
     }
-    
+
+    cout << "Fim teste de dominios" << "\n" << endl;
+    // Instanciar classe de teste de entidade.
+
+    cout << "Inicio teste de entidades: " << endl;
+    TUSessao testeEC;
+
+    switch(testeEC.run()){
+        case TUSessao::SUCESSO: cout << "SUCESSO - SESSAO" << endl;
+                                break;
+        case TUSessao::FALHA: cout << "FALHA - SESSAO" << endl;
+                                break;
+    }
+
     return 0;
 }
