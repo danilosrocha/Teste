@@ -12,7 +12,7 @@ using namespace std;
 // Classe teste de Unidade Nome
 class TUNome {
     private:
-        const string VALOR_VALIDO = "Danilo.";
+        const string VALOR_VALIDO = "Danilo ";
         const string VALOR_INVALIDO = "Bra  silia";
         Nome *nome;                         
         int estado;                             
