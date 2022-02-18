@@ -119,8 +119,23 @@ class TUDuracao {
 };
 
 // Classe teste de Unidade Email
+
 class TUEmail {
 
+    private:
+        const string VALOR_VALIDO = "danilo@gmail.com";
+        const string VALOR_INVALIDO = ".danila @kosako.l";
+        Email *email;                         
+        int estado;                             
+        void setUp();                           
+        void tearDown();                        
+        void testarCenarioSucesso();            
+        void testarCenarioFalha();              
+
+    public:
+        const static int SUCESSO =  0;          
+        const static int FALHA   = -1;          
+        int run(); 
 };
 
 // Classe teste de Unidade Endereco
