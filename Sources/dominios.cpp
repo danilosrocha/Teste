@@ -26,8 +26,11 @@ void Nome::setNome(string nome) {
 }
 
 //----------- Métodos do domínio Email -----------
+void Email::validarEmail(string email) {
+
+}
 void Email::setEmail(string email) {
-    //validarEmail()
+    validarEmail(email);
     this->email = email;
 }
 
