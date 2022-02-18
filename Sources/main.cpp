@@ -104,9 +104,9 @@ int main()
     // Instanciar classe de teste de entidade.
 
     cout << "Inicio teste de entidades: " << endl;
-    TUSessao testeEC;
+    TUSessao testeED;
 
-    switch(testeEC.run()){
+    switch(testeED.run()){
         case TUSessao::SUCESSO: cout << "SUCESSO - SESSAO" << endl;
                                 break;
         case TUSessao::FALHA: cout << "FALHA - SESSAO" << endl;
