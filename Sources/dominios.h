@@ -19,6 +19,7 @@ using namespace std;
 // Dominio de Instancia Nome
 
 class Nome {
+
     private:
         string nome;
 
@@ -33,6 +34,7 @@ inline string Nome::getNome() const{
 }
 
 // Dominio de Instancia Email
+
 class Email {
     private:
         string email;
@@ -47,13 +49,17 @@ inline string Email::getEmail() const{
 }
 
 // Dominio de Instancia Senha
+
 class Senha {
+    
     private:
         string senha;
 
     public:
         void setSenha(string);
         string getSenha() const;
+        void validarSenha(string);
+
 };
 
 inline string Senha::getSenha() const{

@@ -1,14 +1,27 @@
 #include "dominios.h"
+#include <iostream>
+#include <cctype>
+#include <regex>
 
 using namespace std;
+
 //----------- Métodos do domínio Nome -----------
-//void Nome::validarNome(string nome){
-//    if (nome.size() <= 20 && nome.size() >= 5){
-//
-//    }
-//}
+void Nome::validarNome(string nome) {
+
+    regex modelo("([A-Z][A-Za-z]*\\.? ?)+");
+
+    const int min = 5, max = 20;
+    bool validacao = (nome.length() >= min && nome.length() <= max) ? true : false;
+
+    if (!validacao || !regex_match(nome, modelo)) {
+
+        throw invalid_argument("Valor invalido! O nome deve conter de 5 ate 20 caracteres, entre A-Z e a-z, ponto ou espaco.");
+    }
+}
+
 void Nome::setNome(string nome) {
-//    validarNome(nome);
+
+    validarNome(nome);
     this->nome = nome;
 }
 
@@ -19,8 +32,44 @@ void Email::setEmail(string email) {
 }
 
 //----------- Métodos do domínio Senha -----------
+
+void Senha::validarSenha(string senha) {
+
+    int number = senha.size();
+
+    if (number != 6) { 
+
+        throw invalid_argument("A senha precisa ter exatamente 6 caracteres!");
+    }
+
+    int counter = 0;
+
+    for (int j=0;j<senha.size();j++) {
+
+        for(int i=0;i<senha.size();i++) {
+
+            if(senha[i]==senha[j]) {
+
+                counter++;
+            }
+        }
+    }
+
+    if (counter!=senha.size()) {
+
+        throw invalid_argument("Valor invalido! A senha repetiu caractere.");
+    }
+
+    regex model("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,}$");
+
+    if (!regex_match(senha, model)) {
+
+        throw invalid_argument("Valor invalido! Senha faltou requisito.");
+}
+
 void Senha::setSenha(string senha) {
-    //validarSenha()
+
+    validarSenha(senha);
     this->senha = senha;
 }
 
@@ -153,7 +202,6 @@ void Data::setData(string data) {
 }
 
 //----------- Métodos do domínio Horario -----------
-
 void Horario::validarHorario(string horario){
     int hora = stoi(horario.substr(0, 2));
     int minuto = stoi(horario.substr(3, 2));
@@ -195,7 +243,6 @@ void Idioma::setIdioma(string idioma) {
 }
 
 //----------- Métodos do domínio Codigo -----------
-
 void Codigo::validarCodigo(string codigo) {
     char digitoValido[QUANT_DIGITO] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
     bool bCodigoValida = false;
