@@ -42,6 +42,7 @@ class Email {
     public:
         void setEmail(string);
         string getEmail() const;
+        void validarEmail(string);
 };
 
 inline string Email::getEmail() const{

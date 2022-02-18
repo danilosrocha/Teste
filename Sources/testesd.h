@@ -11,7 +11,20 @@ using namespace std;
 
 // Classe teste de Unidade Nome
 class TUNome {
+    private:
+        const string VALOR_VALIDO = "Danilo.";
+        const string VALOR_INVALIDO = "Bra  silia";
+        Nome *nome;                         
+        int estado;                             
+        void setUp();                           
+        void tearDown();                        
+        void testarCenarioSucesso();            
+        void testarCenarioFalha();              
 
+    public:
+        const static int SUCESSO =  0;          
+        const static int FALHA   = -1;          
+        int run();   
 };
 
 // Classe teste de Unidade Cidade
@@ -187,7 +200,20 @@ class TUNota {
 
 // Classe teste de Unidade Senha
 class TUSenha {
+    private:
+        const string VALOR_VALIDO = "dD3456";
+        const string VALOR_INVALIDO = "123456";
+        Senha *senha;                         
+        int estado;                             
+        void setUp();                           
+        void tearDown();                        
+        void testarCenarioSucesso();            
+        void testarCenarioFalha();              
 
+    public:
+        const static int SUCESSO =  0;          
+        const static int FALHA   = -1;          
+        int run(); 
 };
 
 // Classe teste de Unidade Titulo
