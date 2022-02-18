@@ -26,8 +26,11 @@ void Nome::setNome(string nome) {
 }
 
 //----------- Métodos do domínio Email -----------
+void Email::validarEmail(string email) {
+
+}
 void Email::setEmail(string email) {
-    //validarEmail()
+    validarEmail(email);
     this->email = email;
 }
 
@@ -65,6 +68,7 @@ void Senha::validarSenha(string senha) {
     if (!regex_match(senha, model)) {
 
         throw invalid_argument("Valor invalido! Senha faltou requisito.");
+    }
 }
 
 void Senha::setSenha(string senha) {

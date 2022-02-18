@@ -4,6 +4,46 @@ using namespace std;
 
 // Teste de Unidade Nome
 
+void TUNome::setUp() {
+    nome = new Nome();
+    estado = SUCESSO;
+}
+
+void TUNome::tearDown(){
+    delete nome;
+}
+
+void TUNome::testarCenarioSucesso(){
+    try{
+        nome->setNome(VALOR_VALIDO);
+        if (nome->getNome() != VALOR_VALIDO)
+            estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUNome::testarCenarioFalha(){
+    try{
+        nome->setNome(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (nome->getNome() == VALOR_INVALIDO)
+            estado = FALHA;
+    }
+}
+
+int TUNome::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    //cout << cidade->getCidade() << "\n";
+    tearDown();
+    return estado;
+}
+
 // Teste de Unidade Cidade
 void TUCidade::setUp() {
     cidade = new Cidade();
@@ -385,6 +425,47 @@ int TUNota::run(){
 }
 
 // Teste de Unidade Senha
+
+void TUSenha::setUp() {
+    senha = new Senha();
+    estado = SUCESSO;
+}
+
+void TUSenha::tearDown() {
+    delete senha;
+}
+
+void TUSenha::testarCenarioSucesso(){
+    try{
+        senha->setSenha(VALOR_VALIDO);
+        
+        if (senha->getSenha() != VALOR_VALIDO)
+            estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUSenha::testarCenarioFalha(){
+    try{
+        senha->setSenha(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (senha->getSenha() == VALOR_INVALIDO)
+            estado = FALHA;
+    }
+}
+
+int TUSenha::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    //cout << duracao->getTitulo() << "\n";
+    tearDown();
+    return estado;
+}
 
 // Teste de Unidade Titulo
 
