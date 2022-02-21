@@ -257,6 +257,46 @@ int TUDuracao::run(){
 
 // Teste de Unidade Email
 
+void TUEmail::setUp() {
+    email = new Email();
+    estado = SUCESSO;
+}
+
+void TUEmail::tearDown(){
+    delete email;
+}
+
+void TUEmail::testarCenarioSucesso(){
+    try{
+        email->setEmail(VALOR_VALIDO);
+        if (email->getEmail() != VALOR_VALIDO)
+            estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUEmail::testarCenarioFalha(){
+    try{
+        email->setEmail(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (email->getEmail() == VALOR_INVALIDO)
+            estado = FALHA;
+    }
+}
+
+int TUEmail::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    //cout << cidade->getEmail() << "\n";
+    tearDown();
+    return estado;
+}
+
 // Teste de Unidade Endereco
 void TUEndereco::setUp() {
     endereco = new Endereco();

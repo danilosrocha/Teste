@@ -26,9 +26,16 @@ void Nome::setNome(string nome) {
 }
 
 //----------- Métodos do domínio Email -----------
+
 void Email::validarEmail(string email) {
 
+    const string separador = "@";
+
+
+
+
 }
+
 void Email::setEmail(string email) {
     validarEmail(email);
     this->email = email;
