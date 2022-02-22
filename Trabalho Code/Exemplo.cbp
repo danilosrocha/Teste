@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Exemplo" />
+		<Option execution_dir="C:/Users/danil/Desktop/UnB/Técnicas de Programação 1/exemploscodigos/Exemplo 02 - Estruturas de domínio de entidade e de teste de unidade - Copia/" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Exemplos_de_aula" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Exemplos_de_aula" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../../exemploscodigos/Exemplo 02 - Estruturas de domínio de entidade e de teste de unidade - Copia/dominios.cpp" />
+		<Unit filename="../../exemploscodigos/Exemplo 02 - Estruturas de domínio de entidade e de teste de unidade - Copia/dominios.h" />
+		<Unit filename="../../exemploscodigos/Exemplo 02 - Estruturas de domínio de entidade e de teste de unidade - Copia/entidades.cpp" />
+		<Unit filename="../../exemploscodigos/Exemplo 02 - Estruturas de domínio de entidade e de teste de unidade - Copia/entidades.h" />
+		<Unit filename="../../exemploscodigos/Exemplo 02 - Estruturas de domínio de entidade e de teste de unidade - Copia/main.cpp" />
+		<Unit filename="../../exemploscodigos/Exemplo 02 - Estruturas de domínio de entidade e de teste de unidade - Copia/testesd.cpp" />
+		<Unit filename="../../exemploscodigos/Exemplo 02 - Estruturas de domínio de entidade e de teste de unidade - Copia/testesd.h" />
+		<Unit filename="../../exemploscodigos/Exemplo 02 - Estruturas de domínio de entidade e de teste de unidade - Copia/testese.cpp" />
+		<Unit filename="../../exemploscodigos/Exemplo 02 - Estruturas de domínio de entidade e de teste de unidade - Copia/testese.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

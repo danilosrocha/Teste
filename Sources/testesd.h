@@ -12,7 +12,7 @@ using namespace std;
 // Classe teste de Unidade Nome
 class TUNome {
     private:
-        const string VALOR_VALIDO = "Danilo.";
+        const string VALOR_VALIDO = "Danilo ";
         const string VALOR_INVALIDO = "Bra  silia";
         Nome *nome;                         
         int estado;                             
@@ -123,7 +123,7 @@ class TUDuracao {
 class TUEmail {
 
     private:
-        const string VALOR_VALIDO = "danilo@gmail.com";
+        const string VALOR_VALIDO = "dani()lo@gmail.com";
         const string VALOR_INVALIDO = ".danila @kosako.l";
         Email *email;                         
         int estado;                             
