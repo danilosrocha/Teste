@@ -123,7 +123,7 @@ class TUDuracao {
 class TUEmail {
 
     private:
-        const string VALOR_VALIDO = "danilo@gmail.com";
+        const string VALOR_VALIDO = "dani()lo@gmail.com";
         const string VALOR_INVALIDO = ".danila @kosako.l";
         Email *email;                         
         int estado;                             

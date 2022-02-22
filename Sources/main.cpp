@@ -26,6 +26,7 @@ int main()
     TUCodigo testeDJ;
     TUNome testeDK;
     TUSenha testeDL;
+    TUEmail testeDM;
 
     switch(testeDA.run()){
         case TUCidade::SUCESSO: cout << "SUCESSO - CIDADE" << endl;
@@ -123,11 +124,44 @@ int main()
     }
 
 
+    switch(testeDM.run()){
+        case TUEmail::SUCESSO: cout << "SUCESSO - EMAIL" << endl;
+                                break;
+        case TUEmail::FALHA: cout << "FALHA - EMAIL" << endl;
+                                break;
+    }
+
+
     cout << "Fim teste de dominios" << "\n" << endl;
     // Instanciar classe de teste de entidade.
 
     cout << "Inicio teste de entidades: " << endl;
+
+    TUUsuario testeEA;
+    TUExcursao testeEB;
+    TUAvaliacao testeEC;
     TUSessao testeED;
+
+    switch(testeEA.run()) {
+        case TUUsuario::SUCESSO: cout << "SUCESSO - USUARIO" << endl;
+                                break;
+        case TUUsuario::FALHA: cout << "FALHA - USUARIO" << endl;
+                                break;
+    }
+
+    switch(testeEB.run()) {
+        case TUExcursao::SUCESSO: cout << "SUCESSO - EXCURSAO" << endl;
+                                break;
+        case TUExcursao::FALHA: cout << "FALHA - EXCURSAO" << endl;
+                                break;
+    }
+
+    switch(testeEC.run()) {
+        case TUAvaliacao::SUCESSO: cout << "SUCESSO - AVALIACAO" << endl;
+                                break;
+        case TUAvaliacao::FALHA: cout << "FALHA - AVALIACAO" << endl;
+                                break;
+    }
 
     switch(testeED.run()){
         case TUSessao::SUCESSO: cout << "SUCESSO - SESSAO" << endl;
@@ -135,6 +169,8 @@ int main()
         case TUSessao::FALHA: cout << "FALHA - SESSAO" << endl;
                                 break;
     }
+
+    
 
     return 0;
 }

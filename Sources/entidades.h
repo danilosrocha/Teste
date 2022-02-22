@@ -6,30 +6,6 @@
 
 using namespace std;
 
-/* -----------------------------------------------------------------------
-// Estrutura de código sugerida para declaração de classe entidade.
-// Substituir Entidade por nome da classe.
-// Substituir Dominio.
-// Substituir nomeAtributo.
-
-class Entidade {
-    private:
-            Dominio nomeAtributo;                   // Declarar cada atributo da classe.
-    public:
-            void setnomeAtributo(const Dominio&);   // Declarar método set para cada atributo.
-            Dominio getnomeAtributo() const;        // Declarar método get para cada atributo.
-};
-
-inline void Entidade::setnomeAtributo(const Dominio &nomeAtributo){
-    this->nomeAtributo = nomeAtributo;
-}
-
-inline Dominio Entidade::getnomeAtributo() const{
-    return nomeAtributo;
-}
-
------------------------------------------------------------------------ 
-
 class Usuario {
     private:
         Nome nome;
@@ -68,13 +44,14 @@ inline Senha Usuario::getSenha() const {
     return senha;
 }
 
+
 class Excursao {
     private:
         Codigo codigo;
         Titulo titulo;
         Nota nota;
         Cidade cidade;
-        Duracao duracaco;
+        Duracao duracao;
         Descricao descricao;
         Endereco endereco;
 
@@ -83,10 +60,10 @@ class Excursao {
         Codigo getCodigo() const;
         void setTitulo(const Titulo);
         Titulo getTitulo() const;
-        void setNota(const Data);
+        void setNota(const Nota);
         Nota getNota() const;
-        void setDescricao(const Descricao);
-        Descricao getDescricao() const;
+        void setCidade(const Cidade);
+        Cidade getCidade() const;
         void setDuracao(const Duracao);
         Duracao getDuracao() const;
         void setDescricao(const Descricao);
@@ -96,6 +73,64 @@ class Excursao {
         
 };
 
+inline void Excursao::setCodigo(Codigo codigo) {
+    this->codigo = codigo;
+}
+
+inline Codigo Excursao::getCodigo() const {
+    return codigo;
+}
+
+inline void Excursao::setTitulo(Titulo titulo) {
+    this->titulo = titulo;
+}
+
+inline Titulo Excursao::getTitulo() const {
+    return titulo;
+}
+
+inline void Excursao::setNota(Nota nota) {
+    this->nota = nota;
+}
+
+inline Nota Excursao::getNota() const {
+    return nota;
+}
+
+inline void Excursao::setCidade(Cidade cidade) {
+    this->cidade = cidade;
+}
+
+inline Cidade Excursao::getCidade() const {
+    return cidade;
+}
+
+inline void Excursao::setDuracao(Duracao duracao) {
+    this->duracao = duracao;
+}
+
+inline Duracao Excursao::getDuracao() const {
+    return duracao;
+}
+
+inline void Excursao::setDescricao(Descricao descricao) {
+    this->descricao = descricao;
+}
+
+inline Descricao Excursao::getDescricao() const {
+    return descricao;
+}
+
+inline void Excursao::setEndereco(Endereco endereco) {
+    this->endereco = endereco;
+}
+
+inline Endereco Excursao::getEndereco() const {
+    return endereco;
+}
+
+// ------------- Entidade Avaliacao ------------------
+
 class Avaliacao {
     private:
         Codigo codigo;
@@ -104,12 +139,36 @@ class Avaliacao {
     public:
         void setCodigo(const Codigo);
         Codigo getCodigo() const;
-        void setNota(const Data);
+        void setNota(const Nota);
         Nota getNota() const;
         void setDescricao(const Descricao);
         Descricao getDescricao() const;
 };
-*/
+
+inline void Avaliacao::setCodigo(const Codigo codigo) {
+    this->codigo = codigo;
+};
+
+inline Codigo Avaliacao::getCodigo() const {
+    return codigo;
+};
+
+inline void Avaliacao::setNota(const Nota nota) {
+    this->nota = nota;
+};
+
+inline Nota Avaliacao::getNota() const {
+    return nota;
+};
+
+inline void Avaliacao::setDescricao(const Descricao descricao) {
+    this->descricao = descricao;
+};
+
+inline Descricao Avaliacao::getDescricao() const {
+    return descricao;
+};
+
 class Sessao {
     private:
         Codigo codigo;

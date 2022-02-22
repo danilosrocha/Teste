@@ -15,7 +15,7 @@ void Nome::validarNome(string nome) {
 
     if (!validacao || !regex_match(nome, modelo)) {
 
-        throw invalid_argument("Valor invalido! O nome deve conter de 5 ate 20 caracteres, entre A-Z e a-z, ponto ou espaco.");
+        throw invalid_argument("NOME -> Argumento invalido.");
     }
 }
 
@@ -28,12 +28,45 @@ void Nome::setNome(string nome) {
 //----------- Métodos do domínio Email -----------
 
 void Email::validarEmail(string email) {
+    //parteLocal@dominio
+    const char caracterParteLocal[18] = {'!', '#', '$', '%', '&', '*', '+', '-', '/', '=', '?', '^', '_', '`', '{', '|', '}', '~'};
 
-    const string separador = "@";
+    const int separador = email.find("@", 0);
+    const string parteLocal = email.substr(0, separador); 
+    const string dominio = email.substr(separador+1, -1);
+    const int maxPL = 64, maxD = 253;
+    bool bEmailValida = false;
+    bool bParteLocal = true;
+    bool bDominio = true;
 
+    //for(int cont; cont <= parteLocal.length(); cont++) {
+    if (parteLocal.find(caracterParteLocal) == std::string::npos || (parteLocal >= "a" && parteLocal <= "z") || (parteLocal >= "A" && parteLocal <= "Z") || (parteLocal >= "0"  && parteLocal <= "9")) {
+        bParteLocal = false;        
+    }
+    //}
 
-
-
+    for(int cont; cont <= dominio.length(); cont++) {
+        if (! (isalnum(dominio[cont]) || ! (dominio.find("-")) == std::string::npos)) {
+            bDominio = false;
+            break;
+        }
+    }
+    
+    if (bParteLocal == true && bDominio == true) {
+        if ((parteLocal.length() <= maxPL && dominio.length() <= maxD)) {
+            if (email.find("..") == std::string::npos) { //comum
+                if (parteLocal[0] != '.' && parteLocal.back() != '.') {
+                    if (dominio[0] != '.'){
+                        bEmailValida = true;
+                    }
+                }
+                
+            if (bEmailValida == false) {
+                throw invalid_argument("EMAIL -> Argumento invalido.");
+            }
+            }
+        }
+    }
 }
 
 void Email::setEmail(string email) {
@@ -49,7 +82,7 @@ void Senha::validarSenha(string senha) {
 
     if (number != 6) { 
 
-        throw invalid_argument("A senha precisa ter exatamente 6 caracteres!");
+        throw invalid_argument("SENHA -> Argumento invalido.");
     }
 
     int counter = 0;
@@ -67,14 +100,14 @@ void Senha::validarSenha(string senha) {
 
     if (counter!=senha.size()) {
 
-        throw invalid_argument("Valor invalido! A senha repetiu caractere.");
+        throw invalid_argument("SENHA -> Argumento invalido.");
     }
 
     regex model("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,}$");
 
     if (!regex_match(senha, model)) {
 
-        throw invalid_argument("Valor invalido! Senha faltou requisito.");
+        throw invalid_argument("SENHA -> Argumento invalido.");
     }
 }
 
@@ -97,7 +130,7 @@ void Titulo::validarTitulo(string titulo) {
         }
     }
     if (bTituloValida == false) {
-        throw invalid_argument("TITULO-> Argumento invalido.");
+        throw invalid_argument("TITULO -> Argumento invalido.");
     }
 }
 
@@ -117,7 +150,7 @@ void Cidade::validarCidade(string cidade) {
         }
     }
     if (bCidadeValida == false) {
-        throw invalid_argument("CIDADE-> Argumento invalido.");
+        throw invalid_argument("CIDADE -> Argumento invalido.");
     }
 
 }
@@ -137,7 +170,7 @@ void Duracao::validarDuracao(int duracao){
         }
     }
     if (bDuracaoValida == false) {
-        throw invalid_argument("DURACAO-> Argumento invalido.");
+        throw invalid_argument("DURACAO -> Argumento invalido.");
     }
 }
 
@@ -157,7 +190,7 @@ void Endereco::validarEndereco(string endereco) {
         }
     }
     if (bEnderecoValida == false) {
-        throw invalid_argument("ENDERECO-> Argumento invalido.");
+        throw invalid_argument("ENDERECO -> Argumento invalido.");
     }
 }
 
@@ -203,7 +236,7 @@ void Data::validarData(string data){
         }
     }
     if (bDataValida == false) {
-        throw invalid_argument("DATA-> Argumento invalido.");
+        throw invalid_argument("DATA -> Argumento invalido.");
     }
 }
 
@@ -225,7 +258,7 @@ void Horario::validarHorario(string horario){
         }
     }
     if (bHorarioValida == false) {
-        throw invalid_argument("HORARIO-> Argumento invalido.");
+        throw invalid_argument("HORARIO -> Argumento invalido.");
     }
 }
 void Horario::setHorario(string horario) {
@@ -244,7 +277,7 @@ void Idioma::validarIdioma(string idioma){
         }
     }
     if (bIdiomaValida == false) {
-        throw invalid_argument("IDIOMA-> Argumento invalido.");
+        throw invalid_argument("IDIOMA -> Argumento invalido.");
     }
     
 }
@@ -268,7 +301,7 @@ void Codigo::validarCodigo(string codigo) {
     }
     
     if (bCodigoValida == false) {
-        throw invalid_argument("CODIGO-> Argumento invalido.");
+        throw invalid_argument("CODIGO -> Argumento invalido.");
     }    
 }
 
@@ -287,7 +320,7 @@ void Nota::validarNota(int nota){
         }
     }
     if (acharNota == false) {
-        throw invalid_argument("NOTA-> Argumento invalido.");
+        throw invalid_argument("NOTA -> Argumento invalido.");
     }
 }
 
@@ -307,7 +340,7 @@ void Descricao::validarDescricao(std::string descricao) {
         }
     }
     if (bDescricaoValida == false) {
-        throw invalid_argument("DESCRICAO-> Argumento invalido.");
+        throw invalid_argument("DESCRICAO -> Argumento invalido.");
     }
 }
 
