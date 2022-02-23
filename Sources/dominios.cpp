@@ -1,11 +1,11 @@
 #include "dominios.h"
-#include <iostream>
+
 #include <cctype>
 #include <regex>
 
 using namespace std;
 
-//----------- Métodos do domínio Nome -----------
+//----------- Métodos do domínio Nome ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 void Nome::validarNome(string nome) {
 
     regex modelo("([A-Z][A-Za-z]*\\.? ?)+");
@@ -25,42 +25,27 @@ void Nome::setNome(string nome) {
     this->nome = nome;
 }
 
-//----------- Métodos do domínio Email -----------
+//----------- Métodos do domínio Email ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 
 void Email::validarEmail(string email) {
-    //parteLocal@dominio
-    const char caracterParteLocal[18] = {'!', '#', '$', '%', '&', '*', '+', '-', '/', '=', '?', '^', '_', '`', '{', '|', '}', '~'};
 
     const int separador = email.find("@", 0);
-    const string parteLocal = email.substr(0, separador); 
+    const string parteLocal = email.substr(0, separador);
     const string dominio = email.substr(separador+1, -1);
     const int maxPL = 64, maxD = 253;
     bool bEmailValida = false;
-    bool bParteLocal = true;
-    bool bDominio = true;
 
-    //for(int cont; cont <= parteLocal.length(); cont++) {
-    if (parteLocal.find(caracterParteLocal) == std::string::npos || (parteLocal >= "a" && parteLocal <= "z") || (parteLocal >= "A" && parteLocal <= "Z") || (parteLocal >= "0"  && parteLocal <= "9")) {
-        bParteLocal = false;        
-    }
-    //}
+    regex model("/^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$/");
 
-    for(int cont; cont <= dominio.length(); cont++) {
-        if (! (isalnum(dominio[cont]) || ! (dominio.find("-")) == std::string::npos)) {
-            bDominio = false;
-            break;
-        }
-    }
-    
-    if (bParteLocal == true && bDominio == true) {
+    if (!regex_match(email, model)) {
         if ((parteLocal.length() <= maxPL && dominio.length() <= maxD)) {
-            if (email.find("..") == std::string::npos) { //comum
+            if (email.find("..") == std::string::npos) {
                 if (parteLocal[0] != '.' && parteLocal.back() != '.') {
                     if (dominio[0] != '.'){
                         bEmailValida = true;
                     }
                 }
-                
+
             if (bEmailValida == false) {
                 throw invalid_argument("EMAIL -> Argumento invalido.");
             }
@@ -74,13 +59,13 @@ void Email::setEmail(string email) {
     this->email = email;
 }
 
-//----------- Métodos do domínio Senha -----------
+//----------- Métodos do domínio Senha ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 
 void Senha::validarSenha(string senha) {
 
     int number = senha.size();
 
-    if (number != 6) { 
+    if (number != 6) {
 
         throw invalid_argument("SENHA -> Argumento invalido.");
     }
@@ -117,7 +102,7 @@ void Senha::setSenha(string senha) {
     this->senha = senha;
 }
 
-//----------- Métodos do domínio Titulo -----------
+//----------- Métodos do domínio Titulo ----------- Aluno responsável: 190042397
 void Titulo::validarTitulo(string titulo) {
     bool bTituloValida = false;
     if ((titulo >= "a" && titulo <= "z") || (titulo >= "A" && titulo <= "Z")){
@@ -139,7 +124,7 @@ void Titulo::setTitulo(string titulo) {
     this->titulo = titulo;
 }
 
-//----------- Métodos do domínio Cidade ----------- 
+//----------- Métodos do domínio Cidade ----------- Aluno responsável: 190089539
 void Cidade::validarCidade(string cidade) {
     string listaCidades[QUANT_CIDADES] = {"Hong Kong", "Bangkok", "Macau", "Singapura", "Londres", "Paris", "Dubai", "Delhi", "Istambul", "Kuala", "Lumpur", "Nova Iorque", "Antalya", "Mumbai", "Shenzhen", "Phuket"};
     bool bCidadeValida = false;
@@ -160,7 +145,7 @@ void Cidade::setCidade(string cidade) {
     this->cidade = cidade;
 }
 
-//----------- Métodos do domínio Duracao ----------- 
+//----------- Métodos do domínio Duracao ----------- Aluno responsável: 190024771
 void Duracao::validarDuracao(int duracao){
     int duracoes[DURACOES_VALIDAS] = {30, 60, 60, 120, 180};
     bool bDuracaoValida = false;
@@ -179,7 +164,7 @@ void Duracao::setDuracao(int duracao) {
     this->duracao = duracao;
 }
 
-//----------- Métodos do domínio Endereco -----------
+//----------- Métodos do domínio Endereco ----------- Aluno responsável: 190042397
 void Endereco::validarEndereco(string endereco) {
     bool bEnderecoValida = false;
     if (endereco.length() <= 20) {
@@ -199,7 +184,7 @@ void Endereco::setEndereco(string endereco) {
     this->endereco = endereco;
 }
 
-//----------- Métodos do domínio Data -----------
+//----------- Métodos do domínio Data ----------- Aluno responsável: 190089539
 void Data::validarData(string data){
     string meses[QUANT_MESES] = {"Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"};
     int dia = stoi(data.substr(0, 2));
@@ -231,8 +216,8 @@ void Data::validarData(string data){
                             bDataValida = true;
                         }
                     }
-                }         
-            }     
+                }
+            }
         }
     }
     if (bDataValida == false) {
@@ -245,7 +230,7 @@ void Data::setData(string data) {
     this->data = data;
 }
 
-//----------- Métodos do domínio Horario -----------
+//----------- Métodos do domínio Horario ----------- Aluno responsável: 190024771
 void Horario::validarHorario(string horario){
     int hora = stoi(horario.substr(0, 2));
     int minuto = stoi(horario.substr(3, 2));
@@ -266,9 +251,9 @@ void Horario::setHorario(string horario) {
     this->horario = horario;
 }
 
-//----------- Métodos do domínio Idioma -----------
+//----------- Métodos do domínio Idioma ----------- Aluno responsável: 190042397
 void Idioma::validarIdioma(string idioma){
-    string listaIdiomas[QUANT_IDIOMAS] = {"Português", "Espanhol", "Inglês", "Francês"};
+    string listaIdiomas[QUANT_IDIOMAS] = {"Portugues", "Espanhol", "Ingles", "Frances"};
     bool bIdiomaValida = false;
 
     for (int cont = 0; cont < QUANT_IDIOMAS; cont++) {
@@ -279,14 +264,14 @@ void Idioma::validarIdioma(string idioma){
     if (bIdiomaValida == false) {
         throw invalid_argument("IDIOMA -> Argumento invalido.");
     }
-    
+
 }
 void Idioma::setIdioma(string idioma) {
     validarIdioma(idioma);
     this->idioma = idioma;
 }
 
-//----------- Métodos do domínio Codigo -----------
+//----------- Métodos do domínio Codigo ----------- Aluno responsável: 190089539
 void Codigo::validarCodigo(string codigo) {
     char digitoValido[QUANT_DIGITO] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
     bool bCodigoValida = false;
@@ -297,12 +282,12 @@ void Codigo::validarCodigo(string codigo) {
                     bCodigoValida = true;
                 }
             }
-        }   
+        }
     }
-    
+
     if (bCodigoValida == false) {
         throw invalid_argument("CODIGO -> Argumento invalido.");
-    }    
+    }
 }
 
 void Codigo::setCodigo(string codigo) {
@@ -310,7 +295,7 @@ void Codigo::setCodigo(string codigo) {
     this->codigo = codigo;
 }
 
-//----------- Métodos do domínio Nota -----------
+//----------- Métodos do domínio Nota ----------- Aluno responsável: 190024771
 void Nota::validarNota(int nota){
     int notas[NOTAS_VALIDAS] = {0, 1, 2, 3, 4, 5};
     bool acharNota = false;
@@ -329,7 +314,7 @@ void Nota::setNota(int nota){
     this->nota = nota;
 }
 
-//----------- Métodos do domínio Descricao -----------
+//----------- Métodos do domínio Descricao ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 void Descricao::validarDescricao(std::string descricao) {
     bool bDescricaoValida = false;
     if (descricao.length() <= 30) {

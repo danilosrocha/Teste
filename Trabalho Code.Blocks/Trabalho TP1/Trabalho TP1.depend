@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1645577833 source:c:\users\danil\desktop\unb\técnicas de programação 1\trabalho-tp1\trabalho code.blocks\trabalho tp1\dominios.cpp
+	"dominios.h"
+	<cctype>
+	<regex>
+
+1645578665 c:\users\danil\desktop\unb\técnicas de programação 1\trabalho-tp1\trabalho code.blocks\trabalho tp1\dominios.h
+	<stdexcept>
+
+1645577833 source:c:\users\danil\desktop\unb\técnicas de programação 1\trabalho-tp1\trabalho code.blocks\trabalho tp1\entidades.cpp
+	"entidades.h"
+
+1645576977 c:\users\danil\desktop\unb\técnicas de programação 1\trabalho-tp1\trabalho code.blocks\trabalho tp1\entidades.h
+	"dominios.h"
+	<string>
+
+1645577833 source:c:\users\danil\desktop\unb\técnicas de programação 1\trabalho-tp1\trabalho code.blocks\trabalho tp1\main.cpp
+	<iostream>
+	"entidades.h"
+	"dominios.h"
+	"testesd.h"
+	"testese.h"
+
+1645576977 c:\users\danil\desktop\unb\técnicas de programação 1\trabalho-tp1\trabalho code.blocks\trabalho tp1\testesd.h
+	"dominios.h"
+	"entidades.h"
+	<iostream>
+
+1645576977 c:\users\danil\desktop\unb\técnicas de programação 1\trabalho-tp1\trabalho code.blocks\trabalho tp1\testese.h
+	"dominios.h"
+	"entidades.h"
+
+1645576485 source:c:\users\danil\desktop\unb\técnicas de programação 1\trabalho-tp1\trabalho code.blocks\trabalho tp1\testesd.cpp
+	"testesd.h"
+
+1645576495 source:c:\users\danil\desktop\unb\técnicas de programação 1\trabalho-tp1\trabalho code.blocks\trabalho tp1\testese.cpp
+	"testese.h"
+

@@ -12,11 +12,11 @@
 
 using namespace std;
 
-// Criacao dos dominios das classes: Usuario, Avaliacao, Excursao e Sessao
+// ----------- Criacao dos dominios das classes: Usuario, Avaliacao, Excursao e Sessao -----------
 
-// Classe Usuario
+// ----------- Classe Usuario -----------
 
-// Dominio de Instancia Nome
+// ----------- Dominio de Instancia Nome ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 
 class Nome {
 
@@ -33,7 +33,7 @@ inline string Nome::getNome() const{
     return nome;
 }
 
-// Dominio de Instancia Email
+// ----------- Dominio de Instancia Email ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 
 class Email {
     private:
@@ -49,7 +49,7 @@ inline string Email::getEmail() const{
     return email;
 }
 
-// Dominio de Instancia Senha
+// ----------- Dominio de Instancia Senha ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 
 class Senha {
     
@@ -67,9 +67,9 @@ inline string Senha::getSenha() const{
     return senha;
 }
 
-// Classe Excursao -------------------
+// ----------- Classe Excursao -----------
 
-// Dominio de Instancia Titulo
+// ----------- Dominio de Instancia Titulo ----------- Aluno responsável: 190042397
 class Titulo {
     private:
         string titulo;
@@ -84,7 +84,7 @@ inline string Titulo::getTitulo() const{
     return titulo;
 }
 
-// Dominio de Instancia Cidade
+// ----------- Dominio de Instancia Cidade ----------- Aluno responsável: 190089539
 class Cidade {
     private:
         string cidade;
@@ -98,7 +98,7 @@ inline string Cidade::getCidade() const{
     return cidade;
 }
 
-// Dominio de Instancia Duracao
+// ----------- Dominio de Instancia Duracao ----------- Aluno responsável: 190024771
 class Duracao {
     private:
         int duracao;
@@ -113,7 +113,7 @@ inline int Duracao::getDuracao() const{
 }
 
 
-// Dominio de Instancia Endereco
+// ----------- Dominio de Instancia Endereco ----------- Aluno responsável: 190042397
 class Endereco {
     private:
         string endereco;
@@ -127,9 +127,9 @@ inline string Endereco::getEndereco() const{
     return endereco;
 }
 
-// Classe Sessao -------------------
+// ----------- Classe Sessao -----------
 
-// Dominio de Instancia Data
+// ----------- Dominio de Instancia Data ----------- Aluno responsável: 190089539
 class Data {
     private:
         string data;
@@ -143,7 +143,7 @@ inline string Data::getData() const{
     return data;
 }
 
-// Dominio de Instancia Horario
+// ----------- Dominio de Instancia Horario ----------- Aluno responsável: 190024771
 class Horario {
     private:
         string horario;
@@ -159,7 +159,7 @@ inline string Horario::getHorario() const{
 }
 
 
-// Dominio de Instancia Idioma
+// ----------- Dominio de Instancia Idioma ----------- Aluno responsável: 190042397
 class Idioma {
     private:
         string idioma;
@@ -173,9 +173,9 @@ inline string Idioma::getIdioma() const{
     return idioma;
 }
 
-// Dominios Gerais
+// ----------- Dominios Gerais -----------
 
-// Dominio de Instancia Codigo
+// ----------- Dominio de Instancia Codigo ----------- Aluno responsável: 190089539
 class Codigo {
     private:
         string codigo;
@@ -189,7 +189,7 @@ inline string Codigo::getCodigo() const{
     return codigo;
 }
 
-// Dominio de Instancia Nota
+// ----------- Dominio de Instancia Nota ----------- Aluno responsável: 190024771
 class Nota {
     private:
         int nota;
@@ -204,7 +204,7 @@ inline int Nota::getNota() const{
     return nota;
 }
 
-// Dominio de Instancia Descricao
+// ----------- Dominio de Instancia Descricao ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 class Descricao {
     private:
         string descricao;

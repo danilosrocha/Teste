@@ -8,6 +8,8 @@
 
 using namespace std;
 
+// ----------- Classe teste de Unidade Sessao ----------- Aluno responsável: 190089539
+
 class TUSessao {
     private:
         const string VALOR_VALIDO_CODIGO = "123456";
@@ -24,6 +26,8 @@ class TUSessao {
         const static int FALHA   = -1;          
         int run();                              
 };
+
+// ----------- Classe teste de Unidade Excursao ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 
 class TUExcursao {
     private:
@@ -45,6 +49,8 @@ class TUExcursao {
         int run();                              
 };
 
+// ----------- Classe teste de Unidade Avaliacao ----------- Aluno responsável: 190024771
+
 class TUAvaliacao {
     private:
         const string VALOR_VALIDO_CODIGO = "123456";
@@ -61,11 +67,13 @@ class TUAvaliacao {
         int run();                              
 };
 
+// ----------- Classe teste de Unidade Usuario ----------- Aluno responsável: 190042397
+
 class TUUsuario {
     private:
-        const string VALOR_VALIDO_NOME = "Danilo ";
+        const string VALOR_VALIDO_NOME = "Danilo.";
         const string VALOR_VALIDO_SENHA = "dD3456";
-        const string VALOR_VALIDO_EMAIL = "danilo@gma.il.com";
+        const string VALOR_VALIDO_EMAIL = "danila@kosako.l";
         Usuario *usuario;                       
         int estado;                             
         void setUp();                           
