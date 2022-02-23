@@ -6,7 +6,9 @@
 
 using namespace std;
 
-class Usuario {
+//  ----------- Classe Usuario ----------- Aluno responsável: 190042397
+
+class Usuario { 
     private:
         Nome nome;
         Email email;
@@ -44,6 +46,7 @@ inline Senha Usuario::getSenha() const {
     return senha;
 }
 
+// ----------- Classe Excursao ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771 
 
 class Excursao {
     private:
@@ -129,7 +132,7 @@ inline Endereco Excursao::getEndereco() const {
     return endereco;
 }
 
-// ------------- Entidade Avaliacao ------------------
+//  ----------- Classe Avaliacao ----------- Aluno responsável: 190024771
 
 class Avaliacao {
     private:
@@ -168,6 +171,8 @@ inline void Avaliacao::setDescricao(const Descricao descricao) {
 inline Descricao Avaliacao::getDescricao() const {
     return descricao;
 };
+
+// ----------- Classe Sessao ----------- Aluno responsável: 190089539
 
 class Sessao {
     private:

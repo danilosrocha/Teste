@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// Classe teste de Unidade Nome
+// ----------- Classe teste de Unidade Nome ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 class TUNome {
     private:
         const string VALOR_VALIDO = "Danilo ";
@@ -27,7 +27,7 @@ class TUNome {
         int run();   
 };
 
-// Classe teste de Unidade Cidade
+// ----------- Classe teste de Unidade Cidade ----------- Aluno responsável: 190089539
 class TUCidade {
     private:
         const string VALOR_VALIDO = "Bangkok";
@@ -45,7 +45,7 @@ class TUCidade {
         int run();                              
 };
 
-// Classe teste de Unidade Codigo
+// ----------- Classe teste de Unidade Codigo ----------- Aluno responsável: 190089539
 
 class TUCodigo {
     private:
@@ -64,8 +64,8 @@ class TUCodigo {
         int run();
 };
 
-// Classe teste de Unidade Data
-class TUData {
+// ----------- Classe teste de Unidade Data ----------- Aluno responsável: 190089539
+class TUData { 
     private:
         const string VALOR_VALIDO = "30-Abr-2001";
         const string VALOR_INVALIDO = "30-Fev-1000";
@@ -82,7 +82,7 @@ class TUData {
         int run();
 };
 
-// Classe teste de Unidade Descricao
+// ----------- Classe teste de Unidade Descricao ----------- Aluno responsável: 190024771
 class TUDescricao {
     private:
         const string VALOR_VALIDO = "HO HAN!";
@@ -100,7 +100,7 @@ class TUDescricao {
         int run();
 };
 
-// Classe teste de Unidade Duracao
+// ----------- Classe teste de Unidade Duracao ----------- Aluno responsável: 190024771
 class TUDuracao {
     private:
         const static int VALOR_VALIDO = 30;
@@ -117,13 +117,13 @@ class TUDuracao {
         const static int FALHA   = -1;          
         int run();                              
 };
-
-// Classe teste de Unidade Email
+ 
+// ----------- Classe teste de Unidade Email ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 
 class TUEmail {
 
     private:
-        const string VALOR_VALIDO = "dani()lo@gmail.com";
+        const string VALOR_VALIDO = "danilo@gmail.com";
         const string VALOR_INVALIDO = ".danila @kosako.l";
         Email *email;                         
         int estado;                             
@@ -138,7 +138,7 @@ class TUEmail {
         int run(); 
 };
 
-// Classe teste de Unidade Endereco
+// ----------- Classe teste de Unidade Endereco ----------- Aluno responsável: 190042397
 class TUEndereco {
     private:
         const string VALOR_VALIDO = "HO HAN";
@@ -156,7 +156,7 @@ class TUEndereco {
         int run();
 };
 
-// Classe teste de Unidade Horario
+// ----------- Classe teste de Unidade Horario ----------- Aluno responsável: 190024771
 
 class TUHorario {
     private:
@@ -177,7 +177,7 @@ class TUHorario {
 
 
 
-// Classe teste de Unidade Idioma
+// ----------- Classe teste de Unidade Idioma ----------- Aluno responsável: 190042397
 class TUIdioma {
     private:
         const string VALOR_VALIDO = "Português";
@@ -195,7 +195,7 @@ class TUIdioma {
         int run();                              
 };
 
-// Classe teste de Unidade Nota
+// ----------- Classe teste de Unidade Nota ----------- Aluno responsável: 190024771
 class TUNota {
     private:
         const static int VALOR_VALIDO = 3;
@@ -213,7 +213,7 @@ class TUNota {
         int run();                              
 };
 
-// Classe teste de Unidade Senha
+// ----------- Classe teste de Unidade Senha ----------- Alunos responsáveis: 190042397 / 190089539 / 190024771
 class TUSenha {
     private:
         const string VALOR_VALIDO = "dD3456";
@@ -231,7 +231,7 @@ class TUSenha {
         int run(); 
 };
 
-// Classe teste de Unidade Titulo
+// ----------- Classe teste de Unidade Titulo ----------- Aluno responsável: 190042397
 
 class TUTitulo {
     private:
