@@ -1,6 +1,6 @@
 # Desenvolvimento de Aplicativos - UnB
 
-📚- Repositório Criado para realização do trabalho 1 da disciplina de Desenvolvimento de Aplicativos do Professor Wilson Henrique do CIC-UnB
+📚- Repositório Criado para realização do projeto da disciplina de Desenvolvimento de Aplicativos do Professor Wilson Henrique do CIC-UnB
 
 ## Projeto: Aplicativo Meau
 
